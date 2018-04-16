@@ -37,8 +37,8 @@ app.get('/', (req, res) => {
     });
 });
 
-// Require Notes routes
-require('./app/routes/note.routes.js')(app);
+// Require Users routes
+require('./app/routes/user.routes.js')(app);
 
 // a szerver figyeli a 3500-as portot
 app.listen(3500, () => {
