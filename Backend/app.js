@@ -1,11 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
+const createError = require('http-errors');
 
 // create express app
 const app = express();
 
-//parse requests of content-type - application/x-www-form-erlencoded
+//use helmet
+app.use(helmet());
 
+app.use((req, res, next) => {
+    if (!req.user) return next(createError(401, 'Please login to view this page.'))
+    next()
+});
+
+//parse requests of content-type - application/x-www-form-erlencoded
 app.use(bodyParser.urlencoded({
     extended: true
 }));
