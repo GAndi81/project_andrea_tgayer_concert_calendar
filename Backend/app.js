@@ -40,6 +40,10 @@ app.get('/', (req, res) => {
 // Require Users routes
 require('./app/routes/user.routes.js')(app);
 
+//Require Concerts routes
+require('./app/routes/concert.routes.js')(app);
+
+
 // a szerver figyeli a 3500-as portot
 app.listen(3500, () => {
     console.log("Server is listening on port 3500.");
