@@ -12,7 +12,7 @@ exports.create = (req, res) => {
     const concert = new Concert({
         artist: req.body.artist || "Untitled Artist",
         date: req.body.date,
-        venue: require.body.venue
+        venue: req.body.venue
     });
 
     // Save Concert in the database
