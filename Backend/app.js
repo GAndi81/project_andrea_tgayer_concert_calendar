@@ -1,31 +1,46 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
+// create express app
 const app = express();
 
+//parse requests of content-type - application/x-www-form-erlencoded
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+//parse requests of content-type - application/json
+app.use(bodyParser.json());
+
+// Configuring the database
+const dbConfig = require('./config/database.config.js');
+const mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+
+// Connecting to the database
+mongoose.connect(dbConfig.url)
+    .then(() => {
+        console.log("Successfully connected to the database");
+    }).catch(err => {
+        console.log('Could not connect to the database. Exiting now...');
+        process.exit();
+    });
 
 
-//3500-as porton figyel a server
-app.listen(3500, () => console.log('Example app listening on port 3500!'));
 
 //üzenet a 3500-as portra
-app.get('/', (req, res) => res.send('Hello Family!'));
-
-// válasz egy POST requestre
-app.post('/', (req, res) => {
-    res.send('Got a POST request')
+app.get('/', (req, res) => {
+    res.json({
+        "message": "HelloFamily"
+    });
 });
 
-//válasz egy PUT requestre /user routnál
-app.put('/user', function (req, res) {
-    res.send('Got a PUT request at /user')
+// Require Notes routes
+require('./app/routes/note.routes.js')(app);
+
+// a szerver figyeli a 3500-as portot
+app.listen(3500, () => {
+    console.log("Server is listening on port 3500.");
 });
-
-//válasz egy DELETE requestre /user routnál
-app.delete('/user', function (req, res) {
-    res.send('Got a DELETE request at /user')
-});
-
-let users = require('./users');
-app.use('/users', users);
-
-let concertcalendar = require('./concertcalendar');
-app.use('/concertcalendar', concertcalendar);
