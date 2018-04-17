@@ -1,12 +1,19 @@
-//app-concert-calendar
-//app-contact
-//app-lessons-learnt
-//app-main
-//app-profile
-//app-restful-api
 div(style='text-align:center')
-  h1
-    | Welcome to {{ title }}!
-
-a(routerlink='/contact') Contact
-router-outlet
+  h1 App-routing and navigation
+nav.navbar.navbar-expand-sm.bg-dark.navbar-dark
+  // Brand/Logo
+  a.navbar-brand(href='#') Logo
+  // Links
+  ul.navbar-nav
+    li.nav-item
+      a.nav-link(href='/main') Main
+    li.nav-item
+      a.nav-link(href='/profile') Profile
+    li.nav-item
+      a.nav-link(href='/lessons-learnt') Lessons learnt
+    li.nav-item
+      a.nav-link(href='/restful-api') Restful API
+    li.nav-item
+      a.nav-link(href='/concert-calendar') Concert calendar
+    li.nav-item
+      a.nav-link(href='/contact') Contact

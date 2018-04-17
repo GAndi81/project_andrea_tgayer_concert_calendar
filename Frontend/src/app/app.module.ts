@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,12 +14,13 @@ import { ContactComponent } from './contact/contact.component';
 import { ConcertCalendarComponent } from './concert-calendar/concert-calendar.component';
 
 const routes: Routes = [
-  { component: MainComponent, path: 'main' },
-  { component: ProfileComponent, path: 'profile' },
-  { component: LessonsLearntComponent, path: 'lessons-learnt' },
-  { component: RestfulApiComponent, path: 'restful-api' },
-  { component: ContactComponent, path: 'contact' },
-  { component: ConcertCalendarComponent, path: 'concert-calendar' }];
+  { path: '', component: MainComponent, pathMatch: 'full' },
+  { path: 'main', component: MainComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'lessons-learnt', component: LessonsLearntComponent },
+  { path: 'restful-api', component: RestfulApiComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'concert-calendar', component: ConcertCalendarComponent }];
 
 
 @NgModule({
@@ -33,6 +35,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     FormsModule,
     RouterModule.forRoot(routes)
   ],
