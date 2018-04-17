@@ -1,0 +1,16 @@
+.body {
+  text-align: center;
+}
+
+.footer-social {
+  float: right;
+  margin-top: 5px;
+}
+
+.footer-social li {
+  display: inline;
+}
+
+.footer-social span {
+  margin-top: -20px;
+}
