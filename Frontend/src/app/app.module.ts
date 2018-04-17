@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { environment } from '../environments/environment';
 import { RouterModule, Routes } from '@angular/router';
 
 
