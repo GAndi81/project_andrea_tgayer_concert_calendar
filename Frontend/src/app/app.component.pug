@@ -1,19 +1,18 @@
-div(style='text-align:center')
-  h1 App-routing and navigation
-nav.navbar.navbar-expand-sm.bg-dark.navbar-dark
+nav.navbar.navbar-expand-sm.bg-primary.navbar-dark
   // Brand/Logo
-  a.navbar-brand(href='#') Logo
+  a.navbar-brand(href='https://pngtree.com/freepng/hand-painted-pictures-music-note-symbol_389374.html') Logo
   // Links
   ul.navbar-nav
     li.nav-item
-      a.nav-link(href='/main') Main
+      a.nav-link(routerLink='/main', routerLinkActive='active') Main
     li.nav-item
-      a.nav-link(href='/profile') Profile
+      a.nav-link(routerLink='/concert-calendar', routerLinkActive='active') Concert calendar
     li.nav-item
-      a.nav-link(href='/lessons-learnt') Lessons learnt
+      a.nav-link(routerLink='/profile', routerLinkActive='active') Profile
     li.nav-item
-      a.nav-link(href='/restful-api') Restful API
+      a.nav-link(routerLink='/restful-api', routerLinkActive='active') Restful API
     li.nav-item
-      a.nav-link(href='/concert-calendar') Concert calendar
+      a.nav-link(routerLink='/lessons-learnt', routerLinkActive='active') Lessons learnt
     li.nav-item
-      a.nav-link(href='/contact') Contact
+      a.nav-link(routerLink='/contact', routerLinkActive='active') Contact
+router-outlet
