@@ -2,19 +2,33 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Concert calendar
+    title Bakelit
     base(href='/')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='icon', type='image/x-icon', href='favicon.ico')
     link(href='https://fonts.googleapis.com/css?family=Boogaloo', rel='stylesheet')
-    
   body
     header
       section#concert.jumbotron
       // with background image
-      nav.navbar.navbar-light.bg-light
-        form.form-inline
-          button.btn.btn-sm.btn-outline-dark(type='button') BEJELENTKEZÉS
+      .container
+        .row
+          .col-lg-12
+            button.btn.btn-dark(data-toggle='modal', data-target='popupWindow') BEJELENTKEZÉS
+            #popupWindow.modal-fade
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    button.close(type='button', data-dismiss='modal')
+                    h3.modal-title
+                  .modal-body
+                    form(role='form')
+                      .form-group
+                        input.form-control(type='email', name='', placeholder='Email')
+                      .form-group
+                        input.form-control(type='password', name='', placeholder='Jelszó')
+                      .form-group
+                        button#submit(type='submit') RAJT
     main
       section#tartalom1.about
         | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
@@ -34,7 +48,3 @@ html(lang='en')
         li
           a(href='http://www.twitter.com')
             img(src='http://grfx.cstv.com/schools/wis/graphics/icon_twitter24.jpg')
-
-
-
-
