@@ -1,21 +1,20 @@
-div(style='text-align:center')
-  h2 Concert calendar {{title}}
+body
 nav.navbar.navbar-expand-sm.bg-light.navbar-light
   // Brand/Logo
-  a.navbar-brand(href="#") 
+  a.navbar-brand(a href="#") 
   p ♫
   // Links
   ul.navbar-nav
     li.nav-item
-      a.nav-link(routerLink='/main', routerLinkActive='active') Main
+      a.nav-link(routerLink='/main', routerLinkActive='active') FŐOLDAL
     li.nav-item
-      a.nav-link(routerLink='/concert-calendar', routerLinkActive='active') Concert calendar
+      a.nav-link(routerLink='/concert-calendar', routerLinkActive='active') KONCERTFIGYELŐ
     li.nav-item
-      a.nav-link(routerLink='/profile', routerLinkActive='active') Profile
+      a.nav-link(routerLink='/profile', routerLinkActive='active') PROFIL
     li.nav-item
-      a.nav-link(routerLink='/restful-api', routerLinkActive='active') Restful API
+      a.nav-link(routerLink='/restful-api', routerLinkActive='active') RESTFUL API
     li.nav-item
-      a.nav-link(routerLink='/lessons-learnt', routerLinkActive='active') Lessons learnt
+      a.nav-link(routerLink='/lessons-learnt', routerLinkActive='active') TUDÁSBÁZIS
     li.nav-item
-      a.nav-link(routerLink='/contact', routerLinkActive='active') Contact
+      a.nav-link(routerLink='/contact', routerLinkActive='active') KAPCSOLAT
 router-outlet

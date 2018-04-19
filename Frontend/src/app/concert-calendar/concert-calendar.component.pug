@@ -1,1 +1,40 @@
-p Concert-calendar works!
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Concert calendar
+    base(href='/')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', type='image/x-icon', href='favicon.ico')
+    link(href='https://fonts.googleapis.com/css?family=Boogaloo', rel='stylesheet')
+    
+  body
+    header
+      section#concert.jumbotron
+      // with background image
+      nav.navbar.navbar-light.bg-light
+        form.form-inline
+          button.btn.btn-sm.btn-outline-dark(type='button') BEJELENTKEZÉS
+    main
+      section#tartalom1.about
+        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
+        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
+      br
+      section#tartalom2.about
+        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
+        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
+      br
+    footer
+      .footer-social
+      span
+        | Connect with us:
+        li
+          a(href='http://www.facebook.com')
+            img(src='http://www.womenactionmedia.org/cms/assets/themes/crate/images/social/facebook.png')
+        li
+          a(href='http://www.twitter.com')
+            img(src='http://grfx.cstv.com/schools/wis/graphics/icon_twitter24.jpg')
+
+
+
+

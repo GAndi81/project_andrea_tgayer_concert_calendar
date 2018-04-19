@@ -12,6 +12,7 @@ exports.create = (req, res) => {
     const user = new User({
         email: req.body.email || "Untitled Email",
         password: req.body.password
+        // ezt át kell írni, mert a jelszót le kell generálni! titkosítás nélkül nem szabad soha!
     });
 
     // Save User in the database

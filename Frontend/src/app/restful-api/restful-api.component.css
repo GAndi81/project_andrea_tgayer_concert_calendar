@@ -1,0 +1,26 @@
+#concert {
+    background-image: url("/src/assets/img/background2.jpeg");
+    background-size: cover;
+    text-align: center;
+    height: 45vh;
+  }
+  
+  .footer-social {
+    float: right;
+    margin-top: 5px;
+  }
+  
+  .footer-social li {
+    display: inline;
+  }
+  
+  .footer-social span {
+    margin-top: -20px;
+  }
+  
+  .about {
+    text-align: left;
+    font-family: 'Boogaloo', cursive;
+    font-size: 3.5vh;
+  }
+  
