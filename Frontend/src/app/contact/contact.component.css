@@ -1,20 +1,38 @@
-header {
-    background-image: url("/src/assets/img/contact2.jpg");
-    background-size: cover;
-    height: 180vh;
-    width: auto;
-  }
-  
-  .footer-social {
-    float: right;
-    margin-top: 5px;
-  }
-  
-  .footer-social li {
-    display: inline;
-  }
-  
-  .footer-social span {
-    margin-top: -20px;
-  }
-  
+main {
+  background-image: url("/src/assets/img/contact2.jpg");
+  background-size: cover;
+  height: 180vh;
+  width: auto;
+}
+
+.footer-social {
+  float: right;
+  margin-top: 5px;
+}
+
+.footer-social li {
+  display: inline;
+}
+
+.footer-social span {
+  margin-top: -20px;
+}
+
+form {
+  position: relative;
+  text-align: justify;
+}
+
+h2 {
+  padding-top: 25px;
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  font-size: 5vh;
+}
+
+form {
+  padding-top: 25px;
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3.5vh;
+}

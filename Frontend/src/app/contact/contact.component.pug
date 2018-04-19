@@ -7,11 +7,28 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='icon', type='image/x-icon', href='favicon.ico')
     link(href='https://fonts.googleapis.com/css?family=Boogaloo', rel='stylesheet')
-    
   body
     header
       section#concert
       // with background image
+    main
+      .container
+        div(style='text-align:center')
+          h2 Contact Us
+          .row
+            .col-lg-12
+              form(action='/action_page.php')
+                label(for='fname') First Name
+                input#fname(type='text', name='firstname', placeholder='Your name..')
+                label(for='lname') Last Name
+                input#lname(type='text', name='lastname', placeholder='Your last name..')
+                label(for='country') Country
+                input#country(type='text', name='country', placeholder='Your country..')
+                label(for='email') Email
+                input#email(type='email', name='email', placeholder='Your email..')
+                label(for='subject') Subject
+                textarea#subject(name='subject', placeholder='Write something..', style='height:170px')
+                input(type='submit', value='Submit')
     footer
       .footer-social
       span
@@ -22,4 +39,3 @@ html(lang='en')
         li
           a(href='http://www.twitter.com')
             img(src='http://grfx.cstv.com/schools/wis/graphics/icon_twitter24.jpg')
-
