@@ -1,0 +1,20 @@
+#concert {
+    background-image: url("/src/assets/img/contact2.jpg");
+    background-size: cover;
+    height: 150vh;
+    width: auto;
+  }
+  
+  .footer-social {
+    float: right;
+    margin-top: 5px;
+  }
+  
+  .footer-social li {
+    display: inline;
+  }
+  
+  .footer-social span {
+    margin-top: -20px;
+  }
+  

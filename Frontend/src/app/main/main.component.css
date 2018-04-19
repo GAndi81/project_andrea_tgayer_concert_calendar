@@ -1,12 +1,5 @@
-#main {
-  background-image: url("/src/assets/img/background.jpg");
-  background-size: cover;
-  position: relative;
-  height: 150vh;
-}
-
 #header {
-  background-image: url("/src/assets/img/music.jpeg");
+  background-image: url("/src/assets/img/main1.jpg");
   background-size: cover;
   position: relative;
   height: 60vh;
