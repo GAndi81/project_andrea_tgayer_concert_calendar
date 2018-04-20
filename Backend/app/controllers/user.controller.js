@@ -29,7 +29,7 @@ exports.create = (req, res) => {
 
 
 
-// Retrieve and return all users from the database.
+// Find all users from the database.
 exports.findAll = (req, res) => {
     User.find()
         .then(users => {
@@ -41,7 +41,7 @@ exports.findAll = (req, res) => {
         });
 };
 
-// Find a single user with a userId
+// Find a single user by userId
 exports.findOne = (req, res) => {
     User.findById(req.params.userId)
         .then(user => {
