@@ -1,7 +1,7 @@
 #resume {
   background-image: url("/src/assets/img/resume.jpg");
   background-size: cover;
-  height: 65vh;
+  height: 70vh;
   width: auto;
 }
 
@@ -26,6 +26,32 @@
 }
 
 #tartalom {
+  position: relative;
+  text-align: left;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3vh;
+}
+
+#oneletrajz,
+#tapasztalat {
+  position: relative;
+  text-align: left;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3vh;
+}
+
+#profile {
+  position: relative;
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3vh;
+}
+
+h5,
+h4,
+p,
+ul,
+li {
   position: relative;
   text-align: left;
   font-family: 'Boogaloo', cursive;

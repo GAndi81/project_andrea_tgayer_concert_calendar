@@ -5,21 +5,27 @@
   height: 60vh;
 }
 
-.footer-social {
-  float: right;
-  margin-top: 5px;
-}
-
-.footer-social li {
-  display: inline;
-}
-
-.footer-social span {
-  margin-top: -20px;
-}
-
 .about {
   text-align: left;
   font-family: 'Boogaloo', cursive;
   font-size: 3.5vh;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 30px;
+  text-align: left;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
 }

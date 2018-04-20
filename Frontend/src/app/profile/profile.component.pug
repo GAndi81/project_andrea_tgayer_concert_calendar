@@ -12,22 +12,71 @@ html(lang='en')
       section#resume.jumbotron
       // with background image
     main.jumbotron
-      section#tartalom.col-md-8
-        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
-        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
-      br
-      section#tartalom.col-md-8
-        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
-        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
-      br
-      aside#fenykep.col-md-4
-        .panel.panel-default
-          .panel-heading
-            | Tóth-Gayer Andrea
-            | 36 70 372 7956
-            | gayerandi@yahoo.com
-          .panel-body
-            img.image-responsive.rounded(src='/src/assets/img/profile_picture.jpg', alt='')
+     .row
+      .col-sm-9
+        #oneletrajz.card
+          .card-body
+            h5.card-title
+            h4 FŐBB EREDMÉNYEK:
+              ul
+                li
+                | Új termékkatalógus folyamat sikeres átformálásában való részvétel – a múltban használt munkafolyamatok leegyszerűsítése,
+                | 20%-al csökkentve ezzel a fennálló SLA-ban szereplő, szolgáltatási időintervallumokra vonatkozó megállapodásokat.
+                li
+                | Az egyik kisebb európai piac egy termékcsoportjának kezelésére felépített folyamat önálló átvétele, egyszerűsítése,
+                | majd továbbadása az új csapat számára.
+                li
+                | A termékkatalógusok adatminőségének javítására létrehozott projectben való részvétel – historikus adatok elemzése,
+                | kiszűrése, törlése, adattáblák összehangolása a különböző kezelőfelületeken – az adattartalom 35%-nak eltávolítása
+                | - eközben hatékonyabb kommunikáció alakult ki a terméktípusokért felelős munkatársak között valamint az adattartalom
+                | lecsökkenésének eredményeképpen gyorsabbá vált az ügyvitel.
+                br
+            h4 FONTOSABB KÉSZSÉGEK:
+              ul
+                li
+                | Precíz, önálló munkavégzés: több projektben vettem részt a napi feladatok elvégzése mellett a határidők betartásával
+                li
+                | Új ismeretek elsajátítása: hiszek az élethosszig tartó tanulásban, tapasztalom az előnyeit!
+                li
+                | Monotonitástűrés: az „egyhangú” munkafolyamatokat is értékelem, mert nagyon jól kiegészítik a kreativitást vagy összetettebb
+                | megoldást igénylő feladatokat
+      .col-sm-3
+        #profile.card.bg-secondary
+          img.card-img-top(src='/src/assets/img/profilepicture.png', alt='')
+          .card-body
+            h5.card-title
+              p.card-text Tóth-Gayer Andrea
+              p.card-text +36 70 372 79 56
+              p.card-text gayerandi@yahoo.com
+    section#tapasztalat.jumbotron
+        h3 SZAKMAI TAPASZTALAT:
+        br
+        h4 Vodafone Szolgáltató Központ
+          br
+          br
+          h5 2015 - Termékkatalógus csapat - Adatkezelési szakember
+            ul
+              li az egyes katalógus típusokért felelős ügyvezetők teljeskörű támogatása
+              li
+                | a termékkatalógusok kezelése Excel táblákban és az SAP webes felhasználói felületein – új termékek megjelenítése, meglévő termékek változtatása, termékkivezetés
+              li
+                | üzleti partnerekkel, beszállítókkal, viszonteladókkal, a stratégiai központtal való kapcsolattartás
+              li
+                | a csapat számára új, már létező munkafolyamatok átvétele/testre szabása csapatban/egyénileg
+              li a folyamatokhoz kapcsolódó rendszerek/munkafelületek tesztelése
+              li
+                | a csapatom tagjainak, folyamatainak bemutatása más területen dolgozó érdeklődő munkatársak számára
+                | státuszriportok/egyszerűbb adatelemzési riportok elkészítése
+          br
+          h5 2014 - Termékkatalógus projekt csapat – projekt koordinátor
+            br
+            p Adattisztítási projectben való részvétel:
+            ul  
+              li -	táblázatok készítése
+              li -	adattisztítás SAP-ban és az SAP webes felületein
+              li -	kapcsolattartás a projectben résztvevő csapatokkal
+              li -	állapot riportok vezetése
+      
     footer
       .footer-social
       span
