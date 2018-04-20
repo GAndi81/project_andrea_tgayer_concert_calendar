@@ -29,15 +29,86 @@ html(lang='en')
                         input.form-control(type='password', name='', placeholder='Jelszó')
                       .form-group
                         button#submit(type='submit') RAJT
-    main
-      section#tartalom1.about
-        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
-        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
+    main.jumbotron
+      section#tartalom.about
+        | Webáruházunkban közel 600.000 termék közül választhat, amelyek mindegyike nem található meg a budapesti boltunkban.
+        | A keresett termékekről elérhetőségeinken tud érdeklődni. Miért jó bakelitet hallgatni, gyűjteni? 
       br
-      section#tartalom2.about
-        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
-        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
+      section#tartalom.about
+        | Egy bakelit lemezekkel foglalkozó magyar közösségi oldal sikerét látva egy lelkes, zömében debreceni gyűjtőkből álló kis csoport úgy döntött, 
+        | hogy létrehoznak egy ezzel foglalkozó önálló netes oldalt, sőt lemezbörzét is tartanának évente négy alkalommal.
+        | A kezdeményezés egyik elindítója, Elek László portálunknak elmondta: szerte a világon olyan nagy a bakelit reneszánsza,
+        | hogy újra elkezdték gyártani. A gyűjtők Európában elsősorban tömegeket megmozgató lemezbörzéken találkoznak, melyeken főleg cserélnek,
+        | de adni-venni is szoktak. A legnagyobb ilyen rendezvényeket Utrechtben, Bécsben, Frankfurtban, Hamburgban tartják, de Olaszország sem marad le.
+        | Ezekre sokszor az Egyesült Államokból, Mexikóból, de még Japánból is jönnek „megszállott” gyűjtők, akik általában több száz, néhányan több ezer darab lemezzel érkeznek.
       br
+    .row
+      .col-sm-3
+        #lemez.card
+          img.card-img-top(src='/src/assets/img/NeilYoung.jpg', alt='')
+          .card-body
+            h5.card-title
+              | Neil Young & Crazy
+              p.card-text Rust never sleeps
+              a.btn.btn-primary(href='#') Kosárba
+      .col-sm-3
+        #lemez.card
+          img.card-img-top(src='/src/assets/img/JimmyHendrix.jpg', alt='')
+          .card-body
+            h5.card-title
+              | Jimi Hendrix
+              p.card-text Band of Gypsys
+              a.btn.btn-primary(href='#') Kosárba
+      .col-sm-3
+        #lemez.card
+          img.card-img-top(src='/src/assets/img/Floyd.jpg', alt='')
+          .card-body
+            h5.card-title
+              | Pink Floyd
+              p.card-text Live In Montreux 1970
+              a.btn.btn-primary(href='#') Kosárba
+      .col-sm-3
+        #lemez.card
+          img.card-img-top(src='/src/assets/img/Bonamassa.jpg', alt='')
+          .card-body
+            h5.card-title
+              | Joe Bonamassa
+              p.card-text Tour De Force - Shepherd's Bush
+              a.btn.btn-primary(href='#') Kosárba
+    br
+    .row
+      .col-sm-3
+        #lemez.card
+          img.card-img-top(src='/src/assets/img/FlowerKings.jpg', alt='')
+          .card-body
+            h5.card-title
+              | Flower Kings
+              p.card-text Desolation Rose
+              a.btn.btn-primary(href='#') Kosárba
+      .col-sm-3
+        #lemez.card
+          img.card-img-top(src='/src/assets/img/FourPlay.jpg', alt='')
+          .card-body
+            h5.card-title
+              | Fourplay
+              p.card-text Fourplay
+              a.btn.btn-primary(href='#') Kosárba
+      .col-sm-3
+        #lemez.card
+          img.card-img-top(src='/src/assets/img/Coltrane.jpg', alt='')
+          .card-body
+            h5.card-title
+              | John Coltrane Quartet
+              p.card-text Africa / Brass
+              a.btn.btn-primary(href='#') Kosárba
+      .col-sm-3
+        #lemez.card
+          img.card-img-top(src='/src/assets/img/StanGetz.jpg', alt='')
+          .card-body
+            h5.card-title
+              |  Stan Getz / Joao Gilberto
+              p.card-text Featuring Antonio Carlos Jobim
+              a.btn.btn-primary(href='#') Kosárba
     footer
       .footer-social
       span

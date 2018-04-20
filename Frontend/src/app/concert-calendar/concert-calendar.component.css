@@ -3,6 +3,9 @@
   background-size: cover;
   height: 55vh;
   width: auto;
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3.5vh;
 }
 
 .footer-social {
@@ -18,12 +21,19 @@
   margin-top: -20px;
 }
 
-.about {
-  text-align: left;
+#tartalom {
+  text-align: center;
   font-family: 'Boogaloo', cursive;
   font-size: 3.5vh;
 }
 
 #submit {
   text-align: center;
+}
+
+#lemez {
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3.5vh;
+  width: 18rem;
 }

@@ -1,1 +1,40 @@
-p Profile works!
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Concert calendar
+    base(href='/')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', type='image/x-icon', href='favicon.ico')
+    link(href='https://fonts.googleapis.com/css?family=Boogaloo', rel='stylesheet')
+  body
+    header
+      section#resume.jumbotron
+      // with background image
+    main.jumbotron
+      section#tartalom.col-md-8
+        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
+        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
+      br
+      section#tartalom.col-md-8
+        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
+        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
+      br
+      aside#fenykep.col-md-4
+        .panel.panel-default
+          .panel-heading
+            | Tóth-Gayer Andrea
+            | 36 70 372 7956
+            | gayerandi@yahoo.com
+          .panel-body
+            img.image-responsive.rounded(src='/src/assets/img/profile_picture.jpg', alt='')
+    footer
+      .footer-social
+      span
+        | Connect with us:
+        li
+          a(href='http://www.facebook.com')
+            img(src='http://www.womenactionmedia.org/cms/assets/themes/crate/images/social/facebook.png')
+        li
+          a(href='http://www.twitter.com')
+            img(src='http://grfx.cstv.com/schools/wis/graphics/icon_twitter24.jpg')

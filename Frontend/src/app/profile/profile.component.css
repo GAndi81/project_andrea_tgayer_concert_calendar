@@ -1,0 +1,33 @@
+#resume {
+  background-image: url("/src/assets/img/resume.jpg");
+  background-size: cover;
+  height: 65vh;
+  width: auto;
+}
+
+.footer-social {
+  float: right;
+  margin-top: 5px;
+}
+
+.footer-social li {
+  display: inline;
+}
+
+.footer-social span {
+  margin-top: -20px;
+}
+
+#fenykep {
+  position: relative;
+  text-align: right;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3.5vh;
+}
+
+#tartalom {
+  position: relative;
+  text-align: left;
+  font-family: 'Boogaloo', cursive;
+  font-size: 3vh;
+}
