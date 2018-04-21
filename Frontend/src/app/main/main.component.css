@@ -5,9 +5,8 @@
   height: 60vh;
 }
 
-.about,
-h6 {
-  text-align: left;
+.about {
+  text-align: center;
   font-family: 'Boogaloo', cursive;
   font-size: 3.5vh;
 }
