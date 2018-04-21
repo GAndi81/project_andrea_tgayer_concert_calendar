@@ -12,16 +12,20 @@ exports.create = (req, res) => {
     const user = new User({
         email: req.body.email || "Untitled Email",
         password: req.body.password
-        // ezt át kell írni, mert a jelszót le kell generálni! titkosítás nélkül nem szabad soha!
+
     });
 
     // Save User in the database
     user.save()
         .then(data => {
-            res.send(data);
+            console.log('New user saved:' + JSON.stringify(data));
+            res.send({
+                email: data.email
+            });
         }).catch(err => {
+            console.log(err.message);
             res.status(500).send({
-                message: err.message || "Some error occurred while creating the User."
+                message: "Some error occurred while creating the User."
             });
         });
 };

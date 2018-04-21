@@ -15,6 +15,7 @@ import { BakelitComponent } from './bakelit/bakelit.component';
 
 import { BakelitService } from './bakelit.service';
 import { AuthService } from './auth.service';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
@@ -34,7 +35,8 @@ const routes: Routes = [
     LessonsLearntComponent,
     RestfulApiComponent,
     ContactComponent,
-    BakelitComponent
+    BakelitComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
