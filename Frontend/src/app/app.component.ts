@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Headers, RequestOptions } from '@angular/http';
-
+import { Bakelit } from './bakelit';
 
 @Component({
   selector: 'app-root',
@@ -17,13 +17,10 @@ export class AppComponent implements OnInit {
     private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get<Calendar[]>('http://localhost:3500/concerts')
-      .subscribe(concerts => {
-        this.title = concerts[0].artist;
+    this.http.get<Bakelit[]>('http://localhost:3500/bakelits')
+      .subscribe(bakelits => {
+        this.title = bakelits[0].artist;
       });
   }
 }
 
-class Calendar {
-  artist: string;
-}

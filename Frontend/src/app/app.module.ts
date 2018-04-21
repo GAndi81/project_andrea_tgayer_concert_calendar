@@ -11,7 +11,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { LessonsLearntComponent } from './lessons-learnt/lessons-learnt.component';
 import { RestfulApiComponent } from './restful-api/restful-api.component';
 import { ContactComponent } from './contact/contact.component';
-import { ConcertCalendarComponent } from './concert-calendar/concert-calendar.component';
+import { BakelitComponent } from './bakelit/bakelit.component';
+
+import { BakelitService } from './bakelit.service';
+import { AuthService } from './auth.service';
 
 const routes: Routes = [
   { path: '', component: MainComponent, pathMatch: 'full' },
@@ -20,7 +23,7 @@ const routes: Routes = [
   { path: 'lessons-learnt', component: LessonsLearntComponent },
   { path: 'restful-api', component: RestfulApiComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'concert-calendar', component: ConcertCalendarComponent }];
+  { path: 'bakelit', component: BakelitComponent }];
 
 
 @NgModule({
@@ -31,7 +34,7 @@ const routes: Routes = [
     LessonsLearntComponent,
     RestfulApiComponent,
     ContactComponent,
-    ConcertCalendarComponent
+    BakelitComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [
+    BakelitService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
