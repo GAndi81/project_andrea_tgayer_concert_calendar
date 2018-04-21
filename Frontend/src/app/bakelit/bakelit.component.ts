@@ -15,6 +15,7 @@ import { AuthService } from '../auth.service';
 export class BakelitComponent implements OnInit {
 
   bakelits: Bakelit[];
+  users: User[];
 
 
   constructor(
@@ -25,6 +26,9 @@ export class BakelitComponent implements OnInit {
   ngOnInit() {
     this.bakelitService.getBakelits().subscribe(bakelits => {
       this.bakelits = bakelits;
+    });
+    this.authService.getUsers().subscribe(users => {
+      this.users = users;
     });
   }
 }

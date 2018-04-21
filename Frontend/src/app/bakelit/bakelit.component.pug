@@ -22,7 +22,7 @@ html(lang='en')
                     button.close(type='button', data-dismiss='modal')
                     h3.modal-title
                   .modal-body
-                    form(role='form')
+                    form(*ngFor='let user of users')
                       .form-group
                         input.form-control(type='email', name='', placeholder='Email')
                       .form-group
@@ -51,6 +51,8 @@ html(lang='en')
               | {{bakelit.artist}}
               p.card-text {{bakelit.title}}
               a.btn.btn-dark(href='https://www.bakelitfutar.hu/' target='_blank') Kosárba
+    br
+    br
     footer
       h6 További adatok:
         br

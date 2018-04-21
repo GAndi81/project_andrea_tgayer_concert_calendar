@@ -8,8 +8,17 @@
   font-size: 3.5vh;
 }
 
-.card {
-  text-align: left;
+.jumbotron {
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  font-size: 4vh;
+}
+
+.card,
+.card.title {
+  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  font-size: 4vh;
 }
 
 .fa {
