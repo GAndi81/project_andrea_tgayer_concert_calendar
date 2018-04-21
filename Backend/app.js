@@ -36,7 +36,7 @@ mongoose.connect(dbConfig.url)
     .then(() => {
         console.log("Successfully connected to the database");
     }).catch(err => {
-        console.log('Could not connect to the database. Exiting now...');
+        console.log('Could not connect to the database.');
         process.exit();
     });
 
@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
 require('./app/routes/user.routes.js')(app);
 
 //Require Concerts routes
-require('./app/routes/concert.routes.js')(app);
+require('./app/routes/bakelit.routes.js')(app);
 
 
 // a szerver figyeli a 3500-as portot
