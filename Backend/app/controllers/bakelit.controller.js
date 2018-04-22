@@ -21,7 +21,7 @@ exports.create = (req, res) => {
             res.send(data);
         }).catch(err => {
             res.status(500).send({
-                message: err.message || "Some error occurred while creating the bakelit."
+                message: err.message || "An error occurred while creating the bakelit."
             });
         });
 };
