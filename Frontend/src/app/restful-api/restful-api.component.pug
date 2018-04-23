@@ -14,12 +14,29 @@ html(lang='en')
       // with background image
     main
       section#tartalom1.about
-        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
-        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
+        | A REST (Representational State Transfer) egy szoftverarchitektúra típus, elosztott kapcsolat (loose coupling), 
+        | nagy, internet alapú rendszerek számára, amilyen például a világháló. 
+        | A Representational State Transfer kifejezést Roy Fielding vezette be és definiálta 2000-ben a doktori disszertációjában.
+        | Fielding egyike a HTTP (HyperText Transfer Protocol) specifikáció szerkesztőinek.
+        | Azokat a rendszereket, amelyek eleget tesznek a REST megszorításainak, "RESTful"-nak nevezik.
+      br
       br
       section#tartalom2.about
-        | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id illum, sit fuga distinctio omnis vitae cumque eaque asperiores
-        | minima esse vel quisquam. Rerum laboriosam placeat dolorem nobis totam molestias adipisci.
+        | Egy REST típusú architektúra kliensekből és szerverekből áll. A kliensek kéréseket indítanak a szerverek felé; a szerverek kéréseket dolgoznak fel 
+        | és a megfelelő választ küldik vissza.
+        | Bármely adott pillanatban egy kliens vagy állapotok közötti átmenetben van, vagy "nyugalmi" állapotban.
+        | A nyugalmi állapotban lévő kliens képes interakcióra a felhasználójával, de nem hoz létre terhelést és nem fogyaszt tárolót
+        | a szervereken vagy a hálózaton.
+      br
+      br
+      section#tartalom3.about 
+        | Ha a kliens készen áll az átmenetre egy új állapotba, akkor elkezdi küldeni a kéréseit a szerverekhez.
+        | Míg legalább egy olyan kérés van, amelyre nem érkezett válasz, a kliens átmeneti állapotban marad. 
+        | A REST eredetileg a HTTP keretein belül lett leírva, de nem korlátozódik erre a protokollra.
+        | Egy "RESTful" architektúra más alkalmazási rétegbeli protokollra is épülhet,
+        | amennyiben az már rendelkezik értelmes erőforrás-reprezentáció átvitelhez szükséges gazdag és egységes szókinccsel.
+        | A "RESTful" alkalmazások maximálisan kihasználják a választott hálózati protokoll már létező,
+        | jól kialakított interfészeit és egyéb beépített képességeit, és minimalizálják új alkalmazás-specifikus jellemzők bevezetését.
       br
     footer
       h6 Contact us:

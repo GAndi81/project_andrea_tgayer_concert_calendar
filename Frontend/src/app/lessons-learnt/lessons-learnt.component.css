@@ -6,7 +6,7 @@
 }
 
 .about {
-  text-align: left;
+  text-align: center;
   font-family: 'Boogaloo', cursive;
   font-size: 3.5vh;
 }
@@ -46,10 +46,4 @@
 .fa-youtube {
   background: #bb0000;
   color: white;
-}
-
-h6 {
-  text-align: left;
-  font-family: 'Boogaloo', cursive;
-  font-size: 3.5vh;
 }
