@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient,} from '@angular/common/http';
+import { HttpClient, } from '@angular/common/http';
 import { AuthService } from '../auth.service';
 import { User } from '../user';
 import { Headers, RequestOptions } from '@angular/http';
@@ -10,14 +10,23 @@ import { Headers, RequestOptions } from '@angular/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  title = 'login';
+  user: User = {
+    email: '',
+    password: ''
+  };
 
-  constructor(private httpClient: HttpClient, ) { }
+  constructor(private httpClient: HttpClient, public authService: AuthService) { }
 
-  ngOnInit() {
-    this.http.post<User[]>('http://localhost:3500/bakelits')
-      .subscribe(bakelits => {
-        this.title = bakelits[0].artist;
-      });
+  ngOnInit() { }
+
+  login(): void {
+    this.authService.loginUser(this.user).subscribe({
+      next: (user) => { console.log('next: ' + JSON.stringify(user)); },
+      error: (err) => {
+        console.log(err.status);
+        console.log('err: ' + JSON.stringify(err));
+      },
+      complete: () => { console.log('complete'); }
+    });
   }
 }

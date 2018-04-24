@@ -4,15 +4,18 @@ module.exports = (app) => {
     // Create a new User
     app.post('/users', users.create);
 
-    // Retrieve all Users
+    // Get all users
     app.get('/users', users.findAll);
 
-    // Retrieve a single Note with noteId
+    // Login users
+    app.get('/users/:userId', users.login);
+
+    //Get a user by ID
     app.get('/users/:userId', users.findOne);
 
-    // Update a Note with noteId
+    // Update a user by ID
     app.put('/users/:userId', users.update);
 
-    // Delete a Note with noteId
+    // Delete a user by ID
     app.delete('/users/:userId', users.delete);
 };
