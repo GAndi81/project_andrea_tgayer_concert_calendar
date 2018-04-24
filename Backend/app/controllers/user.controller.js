@@ -1,7 +1,7 @@
 const User = require('../models/user.model.js');
 
 // Create and Save a new User
-exports.create = (req, res) => {
+exports.registration = (req, res) => {
     //Validate request
     if (!req.body.email) {
         return res.status(400).send({
@@ -31,14 +31,17 @@ exports.create = (req, res) => {
 
 // user login - 
 exports.login = (req, res) => {
-    User.findByEmail(req.params.userEmail, req.params.userPassword)
+    User.findOne({
+            email: req.body.email,
+            password: req.body.password
+        })
         .then(user => {
             if (!user) {
                 return res.status(404).send({
                     message: "User not found by email " + req.params.userEmail
                 });
             }
-            res.send(user);
+            res.status(200).send();
         }).catch(err => {
             if (err.kind === 'ObjectId') {
                 return res.status(404).send({

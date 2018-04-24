@@ -21,12 +21,12 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     this.authService.loginUser(this.user).subscribe({
-      next: (user) => { console.log('next: ' + JSON.stringify(user)); },
+      next: (data) => { console.log('next: ' + JSON.stringify(data)); },
       error: (err) => {
         console.log(err.status);
         console.log('err: ' + JSON.stringify(err));
       },
-      complete: () => { console.log('complete'); }
+      complete: () => { console.log('user logged in'); }
     });
   }
 }
