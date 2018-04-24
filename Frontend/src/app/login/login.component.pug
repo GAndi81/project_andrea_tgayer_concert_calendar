@@ -1,0 +1,18 @@
+.container
+  .row
+    .col-6
+      button.btn.btn-dark(data-toggle='modal', data-target='popupWindow') Bejelentkezés
+      #popupWindow.modal-fade
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal')
+              h3.modal-title
+            .modal-body
+              form
+                .form-group
+                  input.form-control(placeholder='Email', name='email', [(ngModel)]="user.email")
+                .form-group
+                  input.form-control(type='password', name='password', placeholder='Jelszó', [(ngModel)]="user.password")
+                .form-group
+                  button#submit(type='submit', (click)='login()') Bejelentkezés

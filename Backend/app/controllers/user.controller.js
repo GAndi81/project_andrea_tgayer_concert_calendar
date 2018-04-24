@@ -14,7 +14,6 @@ exports.create = (req, res) => {
         password: req.body.password
 
     });
-
     // Save User in the database
     user.save()
         .then(data => {
@@ -30,22 +29,29 @@ exports.create = (req, res) => {
         });
 };
 
-
-
-
-// Find all users from the database.
-exports.findAll = (req, res) => {
-    User.find()
-        .then(users => {
-            res.send(users);
+// user login - 
+exports.findOne = (req, res) => {
+    User.findByEmailAndPassword(req.params.userEmail, req.params.userEmail)
+        .then(user => {
+            if (!user) {
+                return res.status(404).send({
+                    message: "User not found by email " + req.params.userEmail
+                });
+            }
+            res.send(user);
         }).catch(err => {
-            res.status(500).send({
-                message: err.message || "Some error occurred while retrieving users."
+            if (err.kind === 'ObjectId') {
+                return res.status(404).send({
+                    message: "User not found by email " + req.params.userEmail
+                });
+            }
+            return res.status(500).send({
+                message: "Error occurred " + req.params.userEmail
             });
         });
 };
 
-// Find a single user by userId
+// find an existing user in the database
 exports.findOne = (req, res) => {
     User.findById(req.params.userId)
         .then(user => {
@@ -99,6 +105,18 @@ exports.update = (req, res) => {
             }
             return res.status(500).send({
                 message: "Error updating user with id " + req.params.userId
+            });
+        });
+};
+
+// Find all users from the database.
+exports.findAll = (req, res) => {
+    User.find()
+        .then(users => {
+            res.send(users);
+        }).catch(err => {
+            res.status(500).send({
+                message: err.message || "Some error occurred while retrieving users."
             });
         });
 };
