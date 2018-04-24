@@ -31,7 +31,7 @@ exports.create = (req, res) => {
 
 // user login - 
 exports.findOne = (req, res) => {
-    User.findByEmailAndPassword(req.params.userEmail, req.params.userEmail)
+    User.findByEmail(req.params.userEmail)
         .then(user => {
             if (!user) {
                 return res.status(404).send({
