@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     this.authService.loginUser(this.user).subscribe({
-      next: (data) => { console.log('next: ' + JSON.stringify(data)); },
+      next: (data) => { console.log(); },
       error: (err) => {
         console.log(err.status);
         console.log('err: ' + JSON.stringify(err));
